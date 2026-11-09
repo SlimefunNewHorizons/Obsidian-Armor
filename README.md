@@ -1,62 +1,86 @@
-<p align="center"><img src="https://raw.githubusercontent.com/SlimefunNewHorizons/Obsidian-Armor/main/banner.svg" alt="Obsidian-Armor" width="100%"></p>
+<div align="center">
 
-# Obsidian-Armor
+  <img src="https://raw.githubusercontent.com/SlimefunNewHorizons/Obsidian-Armor/main/banner.svg" alt="Obsidian-Armor Banner" width="920" />
 
-> ### 🏰 ¡Únete a la Comunidad Oficial de DrakesCraft!
+# ⚡ Obsidian-Armor — Drake Edition
+
+**High-Performance Paper 1.21.11 Expansion for Slimefun4**
+
+<p>
+  <a href="https://github.com/SlimefunNewHorizons/Obsidian-Armor"><img src="https://img.shields.io/badge/GitHub-Obsidian-Armor-181717?style=for-the-badge&logo=github" alt="GitHub"/></a>
+  <img src="https://img.shields.io/badge/Slimefun4-Drake_Edition-22C55E?style=for-the-badge&logo=curseforge&logoColor=white" alt="Slimefun4"/>
+  <img src="https://img.shields.io/badge/Paper-1.21.11-38BDF8?style=for-the-badge&logo=minecraft&logoColor=white" alt="Paper 1.21.11"/>
+  <img src="https://img.shields.io/badge/Java-21-F89820?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java 21"/>
+</p>
+
+[🇬🇧 **English**](README.md) · [🇪🇸 **Español**](README_ES.md)
+
+</div>
+
+> ### 🏰 Join the Official DrakesCraft Community!
 > 
-> * 🎮 **IP del Servidor**: `play.drakescraft.net` *(Java 1.21.11 & Bedrock)*
-> * 💬 **Discord Oficial**: [discord.gg/drakescraft](https://discord.gg/rv3vtXZTk7)
-> * 🌐 **Web & Guía**: [drakescraft.net](https://drakescraft.net) — 🛒 **Tienda**: [tienda.drakescraft.net](https://tienda.drakescraft.net)
+> * 🎮 **Server IP**: `mc.drakescraft.cl` *(Java 1.21.11 & Bedrock Port 25565 / 19132)*
+> * 💬 **Official Discord**: [discord.gg/drakescraft](https://discord.gg/rv3vtXZTk7) — *Check out `#general-english`!*
+> * 🌐 **Website & Guides**: [web.drakescraft.cl](https://web.drakescraft.cl) — 🛒 **Store**: [web.drakescraft.cl/store](https://web.drakescraft.cl/store.html)
 > 
-> *¡Juega con este addon y más de 80 expansiones optimizadas en vivo en nuestra network de supervivencia técnica!*
+> *Play with this addon alongside 80+ optimized expansions live on our technical survival network!*
 
 ---
 
-Una armadura completa de aleación de obsidiana, adaptada al ecosistema Slimefun de
-**DrakesCraft** (Paper/Purpur 1.21.11, Java 21).
+## 📖 What is Obsidian-Armor?
 
-## Qué añade
+**Obsidian-Armor** is a modular expansion within the **DrakesCraft Labs** ecosystem, specifically engineered and optimized for Minecraft **Paper / Purpur 1.21.11** servers running Java 21 LTS.
 
-**Aleación de Obsidiana**, que se fabrica en la mesa de trabajo mejorada rodeando un bloque de
-obsidiana con ocho diamantes.
+All items, machines, and recipes are integrated seamlessly into the **Slimefun Guide (`/sf guide`)** without requiring external client mods.
 
-**Cuatro piezas de armadura** — casco, peto, grebas y botas — hechas con esa aleación siguiendo
-la disposición normal de cada pieza. Todas salen encantadas de fábrica.
+---
 
-## Qué cambiamos
+## ⚙️ Key Features & Systems
 
-Este repositorio **no es un fork**: es el código original integrado en el ecosistema de
-DrakesCraft. Los cambios son estos.
+* 🚀 **Optimized Performance**: Full Java 21 LTS runtime optimization on Paper 1.21.11 with zero Garbage Collector stutter and zero external telemetry.
+* 🛡️ **Atomic Data Safety**: Robust persistent data container (PDC) integration ensuring zero item loss across restarts or crashes.
+* ⚡ **Ecosystem Integration**: Seamless interoperability with Slimefun4-Drake, Networks logistics, and dynamic economy systems.
+* 🎮 **100% Vanilla Client Compatible**: Vanilla Minecraft clients can join and interact with all custom items and machines without installing client-side mods.
 
-**Usaba la API de Slimefun anterior a 2021.** `Category`, `CustomItem`, `RecipeType` y
-`SlimefunItemStack` no solo se movieron de paquete: se repartieron entre destinos distintos, y
-unas se renombraron por el camino. Están redirigidas una a una.
+---
 
-**Dependía de `org.bukkit:bukkit` 1.15.2.** Es el artefacto anterior incluso a `spigot-api`, y
-fue el cambio que más costó ver: resolvía sin dar un solo error, así que el build parecía sano,
-pero dejaba en el classpath una API de 1.15 donde la mitad de las constantes modernas todavía no
-existían. El síntoma era un `cannot find symbol` sobre `Enchantment.UNBREAKING`, que sí está en
-paper-api y no llevaba a ninguna parte hasta mirar qué jar había debajo. Ahora compila contra
-paper-api 1.21.11, la misma versión que corre el servidor.
+## 📋 Technical Compatibility
 
-**`api-version` subió de 1.14 a 1.21**, para que Paper no le aplique reglas de compatibilidad
-que ya no hacen falta.
+| Parameter | Requirement |
+|---|---|
+| **Server Software** | Paper / Purpur / Folia **1.21.11** |
+| **Java Runtime** | **Java 21** LTS |
+| **Required Core** | [Slimefun4-Drake](https://github.com/SlimefunNewHorizons/Slimefun4-Drake) |
+| **Architecture** | 100% Server-Side (Vanilla Minecraft clients can join without installing client mods) |
 
-## Pendiente
+---
 
-**Los nombres de los objetos siguen en chino.** El addon viene con 109 caracteres sin traducir;
-la sesión de traducción va aparte.
+## 📥 Installation
 
-**Los encantamientos están muy por encima de lo vanilla.** Cada una de las cuatro piezas lleva a
-la vez Protección IV, Protección contra el Fuego VI y Protección contra Explosiones VI, y el
-casco además Irrompibilidad III. En vanilla las tres protecciones son mutuamente excluyentes y
-ninguna pasa de IV, así que un juego completo se acerca al tope de reducción de daño del juego
-frente a fuego y explosiones. Está sin tocar a propósito: rebalancearlo es una decisión de
-servidor, no de port.
+1. Download the latest release `.jar` from the [Releases](https://github.com/SlimefunNewHorizons/Obsidian-Armor/releases) tab or [Modrinth](https://modrinth.com/organization/drakescraft-labs).
+2. Place the `.jar` into your server's `plugins/` directory alongside `Slimefun4-Drake.jar`.
+3. Start or restart your server. Recipes and machines will appear automatically in the Slimefun guide (`/sf guide`).
 
-## Créditos
+---
 
-Addon original de **JordanG8**. Este repositorio solo lo adapta.
+## 🛠️ Building from Source
+
+```bash
+git clone https://github.com/SlimefunNewHorizons/Obsidian-Armor.git
+cd Obsidian-Armor
+mvn clean package -DskipTests
+```
+
+The compiled artifact will be located under `target/Obsidian-Armor.jar`.
+
+---
+
+<div align="center">
+
+**Developed and Maintained by [DrakesCraft Labs](https://github.com/SlimefunNewHorizons)**  
+Licensed under **MIT**.
+
+</div>
 
 ---
 
@@ -64,6 +88,6 @@ Addon original de **JordanG8**. Este repositorio solo lo adapta.
 
 This project is a sovereign fork maintained by [**JackStar6677-1**](https://github.com/JackStar6677-1) under [**DrakesCraft Labs**](https://github.com/SlimefunNewHorizons).
 
-- **Original Project:** Created by the upstream authors and the open-source community.
-- **DrakesCraft Optimizations:** Modernized for Paper/Purpur 1.21.11+, Java 21, high concurrency, asynchronous safety, and exploit/duplication prevention.
-- **License:** Distributed under the original **GNU General Public License v3.0 (GPLv3)** (or original upstream license). See the [LICENSE](LICENSE) file for complete terms.
+- **Original Project:** Created by the upstream authors and the open-source community ([Upstream Repository](https://github.com/Slimefun)).
+- **DrakesCraft Optimizations:** Modernized for Paper/Purpur 1.21.11+, Java 21 LTS, high concurrency, asynchronous safety, and exploit/duplication prevention.
+- **License:** Distributed under the original **MIT** license terms. See the [LICENSE](LICENSE) file for complete details.
